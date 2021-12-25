@@ -1,1 +1,21 @@
-<p>sign-up works!</p>
+<div class="form-container mat-elevation-z5">
+    <h1>Sign up</h1>
+    <form [formGroup]="signupForm" (submit)="submit()">
+        <mat-form-field>
+            <input type="email" matInput placeholder="Email address" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">Email is required.</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">Wrong email format.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="password?.errors?.['required']">Password is required.</mat-error>
+        </mat-form-field>
+        <div class="center margin-top">
+            <button type="submit" mat-raised-button color="primary">
+                Sign up</button>
+        </div>
+        <span class="center margin-top">Do you have an account?
+            <a routerLink="../login" class="sign-up-link">Login here!</a>
+        </span>
+    </form>
+</div>

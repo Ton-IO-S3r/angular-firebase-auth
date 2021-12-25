@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 
 
@@ -45,7 +46,8 @@ import { LandingComponent } from './components/landing/landing.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFunctions(() => getFunctions())
+    provideFunctions(() => getFunctions()),
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
