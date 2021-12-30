@@ -14,6 +14,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
 import { ReactiveFormsModule } from '@angular/forms'; 
 
 
@@ -22,6 +23,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 
 
@@ -31,7 +33,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
     HomeComponent,
     SignUpComponent,
     LoginComponent,
-    LandingComponent
+    LandingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
+    MatMenuModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

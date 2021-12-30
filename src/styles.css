@@ -27,3 +27,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-center{
     text-align: center;
 }
+
+.sign-up-link{
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
